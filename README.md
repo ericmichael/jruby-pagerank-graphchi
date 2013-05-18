@@ -66,32 +66,26 @@ how it works. ---
 Dependencies
 -------------------------
 * JRuby - [Download](http://jruby.org/)
-* * GraphChi for Java -
+* GraphChi for Java -
   [Download](https://code.google.com/p/graphchi-java/)
 * Some Data! - *[Example Twitter Dataset (1.4 billion
-  edges!)](http://bickson.blogspot.com/2012/03/interesting-twitter-dataset.html)
-- May take over an hour to process depending on your machine*
--
-- Usage
-- ------------------------
--
--
--
-- 1.  Download an install JRuby
--
-- 2.  Download and extract GraphChi for Java
--
-- 3. Modify the third line of `pagerank.rb` to point to the location of
-  your `graphchi-java-0.2-jar-with-dependencies.jar`
+  edges!)](http://bickson.blogspot.com/2012/03/interesting-twitter-dataset.html) May take over an hour to process depending on your machine*
 
-        2. # Modify this to point to your graphchi jar file
-        3. require
-"../graphchi-java/target/graphchi-java-0.2-jar-with-dependencies.jar"
+Usage
+------------------------
+
+1.  Download an install JRuby
+2.  Download and extract GraphChi for Java
+3. Modify the third line of `pagerank.rb` to point to the location of
+ your `graphchi-java-0.2-jar-with-dependencies.jar`
+ 
+        # Modify this to point to your graphchi jar file
+ 
+        require "../graphchi-java/target/graphchi-java-0.2-jar-with-dependencies.jar"
 
 4. Run the algorithm
 
-        jruby -J-Xmx4096m PageRank.rb [graph_file] [num_of_shards]
-[edgelist|adjlist]
+        jruby -J-Xmx4096m PageRank.rb [graph_file] [num_of_shards] [edgelist|adjlist]
 
 Options:
 
